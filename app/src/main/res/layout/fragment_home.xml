@@ -36,6 +36,7 @@
         android:id="@+id/button_layout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row_one_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
@@ -44,31 +45,31 @@
             tools:ignore="MissingConstraints">
 
             <ImageView
-                android:padding="8dp"
-                android:id="@+id/imageView"
+                android:id="@+id/id_general_event"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_general" />
 
             <ImageView
-                android:padding="8dp"
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="70dp"
                 android:layout_marginEnd="72dp"
+                android:padding="8dp"
                 app:layout_constraintEnd_toStartOf="@+id/imageView3"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/id_general_event"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_cse" />
 
             <ImageView
-                android:padding="8dp"
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_ece" />

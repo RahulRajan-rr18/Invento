@@ -1,8 +1,8 @@
 package com.gecpalakkad.invento2k20;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 
-import android.os.Handler;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -11,14 +11,20 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActionBar toolbar;
-    boolean doubleBackToExitPressedOnce = false;
 
+    private  static  long back_key_pressed;
+    @Override
+    public void onBackPressed()
+    {
+        if (back_key_pressed + 2000 > System.currentTimeMillis()) super.onBackPressed();
+        else Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
+        back_key_pressed = System.currentTimeMillis();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame_container, new HomeFragment())
+                .commit();
 
-//        toolbar.setTitle("Home");
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -40,18 +48,15 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
             switch (item.getItemId()) {
-                case R.id.navigation_shop:
-//                    toolbar.setTitle("Home");
-                    fragment = new HomeFragment();
-                    loadFragment(fragment);
-                    return true;
-                case R.id.navigation_gifts:
-//                    toolbar.setTitle("About");
+                case R.id.navigation_about:
                     fragment = new AboutFragment();
                     loadFragment(fragment);
                     return true;
-                case R.id.navigation_cart:
-//                    toolbar.setTitle("Queries");
+                case R.id.navigation_home:
+                    fragment = new HomeFragment();
+                    loadFragment(fragment);
+                    return true;
+                case R.id.navigation_mess:
                     fragment = new MessFragment();
                     loadFragment(fragment);
                     return true;
@@ -67,4 +72,6 @@ public class MainActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
+
 }

@@ -3,17 +3,17 @@
 
 
     <item
-        android:id="@+id/navigation_cart"
+        android:id="@+id/navigation_about"
         android:icon="@drawable/ic_action_person"
         android:title="@string/title_about" />
     <item
-        android:id="@+id/navigation_shop"
+        android:id="@+id/navigation_home"
         android:icon="@drawable/ic_action_home"
         android:title="@string/title_home" />
 
 
     <item
-        android:id="@+id/navigation_gifts"
+        android:id="@+id/navigation_mess"
         android:icon="@drawable/ic_action_help"
         android:title="@string/tilte_messages" />
 
