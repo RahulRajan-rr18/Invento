@@ -13,5 +13,12 @@ public class GeneralEvents extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_general_events);
+        cseEvents = findViewById(R.id.ideventGeneral);
+
+        cseEvents.setWebViewClient(new WebViewClient());
+
+        cseEvents.getSettings().setJavaScriptEnabled(true);
+        cseEvents.loadUrl("https://www.invento2020.com/general");
+
     }
 }

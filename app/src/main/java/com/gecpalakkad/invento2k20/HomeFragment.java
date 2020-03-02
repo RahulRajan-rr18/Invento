@@ -40,8 +40,8 @@ ImageView eventsCse,genEvents,eceEvents,eeeEvents,itEvents,meEvents;
             public void onClick(View v) {
                 Animation animFadein = AnimationUtils.loadAnimation(getContext(),R.anim.fade_in);
                 genEvents.startAnimation(animFadein);
-
-                Toast.makeText(getContext(), "GeneralEventPage", Toast.LENGTH_SHORT).show();
+Intent intent = new Intent(getActivity(),GeneralEvents.class);
+startActivity(intent);
             }
         });
         eceEvents = view.findViewById(R.id.id_ece);
@@ -50,8 +50,8 @@ ImageView eventsCse,genEvents,eceEvents,eeeEvents,itEvents,meEvents;
             public void onClick(View v) {
                 Animation animFadein = AnimationUtils.loadAnimation(getContext(),R.anim.fade_in);
                 eceEvents.startAnimation(animFadein);
-
-                Toast.makeText(getContext(), "Ece Event Page", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(),EventsEceActivity.class);
+                startActivity( intent);
             }
         });
 
@@ -61,7 +61,8 @@ ImageView eventsCse,genEvents,eceEvents,eeeEvents,itEvents,meEvents;
             public void onClick(View v) {
                 Animation animFadein = AnimationUtils.loadAnimation(getContext(),R.anim.fade_in);
                 eeeEvents.startAnimation(animFadein);
-                Toast.makeText(getContext(), "EEE Event Page", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(),EventsEeeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -71,7 +72,9 @@ ImageView eventsCse,genEvents,eceEvents,eeeEvents,itEvents,meEvents;
             public void onClick(View v) {
                 Animation animFadein = AnimationUtils.loadAnimation(getContext(),R.anim.fade_in);
                 itEvents.startAnimation(animFadein);
-                Toast.makeText(getContext(), "IT Event Page", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getActivity(),EventsItActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -81,7 +84,9 @@ ImageView eventsCse,genEvents,eceEvents,eeeEvents,itEvents,meEvents;
             public void onClick(View v) {
                 Animation animFadein = AnimationUtils.loadAnimation(getContext(),R.anim.fade_in);
                 meEvents.startAnimation(animFadein);
-                Toast.makeText(getContext(), "ME Event Page", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getActivity(),EventsMeActivity.class);
+                startActivity(intent);
             }
         });
         return view;

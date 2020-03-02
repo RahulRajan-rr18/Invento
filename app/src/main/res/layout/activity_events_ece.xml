@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GeneralEvents">
-
+    tools:context=".EventsEceActivity">
 
     <WebView
-        android:id="@+id/ideventGeneral"
+        android:id="@+id/ideventece"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

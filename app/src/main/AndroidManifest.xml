@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".EventsCseActivity"></activity>
+        <activity android:name=".EventsMeActivity"></activity>
+        <activity android:name=".EventsItActivity" />
+        <activity android:name=".EventsEceActivity" />
+        <activity android:name=".EventsEeeActivity" />
+        <activity android:name=".EventsCseActivity" />
         <activity android:name=".GeneralEvents" />
         <activity android:name=".MainActivity">
             <intent-filter>
