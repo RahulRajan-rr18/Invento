@@ -6,6 +6,7 @@
     <color name="bgBottomNavigation">#3F3333</color>
     <color name="colorWhite">#AF9191</color>
     <color name="bgBottomNavigationunchecked">#FFFFFF</color>
+    <color name="transparent">#00000000 </color>
 
 
 </resources>

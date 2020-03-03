@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".EventsMeActivity"></activity>
+        <activity android:name=".SpecialEventPage"></activity>
+        <activity android:name=".EventsMeActivity" />
         <activity android:name=".EventsItActivity" />
         <activity android:name=".EventsEceActivity" />
         <activity android:name=".EventsEeeActivity" />

@@ -14,13 +14,23 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 public class HomeFragment extends Fragment {
 ImageView eventsCse,genEvents,eceEvents,eeeEvents,itEvents,meEvents;
+ViewPager viewpage;
+    MyCustomPagerAdapter myCustomPagerAdapter;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_home,container,false);
+        int images[] = {R.drawable.balloon_cornered, R.drawable.slider, R.drawable.slider, R.drawable.slider};
+
+        viewpage = view.findViewById(R.id.viewPager);
+
+        myCustomPagerAdapter = new MyCustomPagerAdapter(getContext(), images);
+        viewpage.setAdapter(myCustomPagerAdapter);
 
         eventsCse = (ImageView) view.findViewById(R.id.id_cse);
         eventsCse.setOnClickListener(new View.OnClickListener() {
