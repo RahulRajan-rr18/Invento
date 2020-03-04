@@ -53,22 +53,21 @@ public class MyCustomPagerAdapter extends PagerAdapter {
                        context.startActivity(intent);
                        break;
                    case 2:
-                       Intent intent1  = new Intent(context , SpecialEventPage.class);
+                       Intent intent1  = new Intent(context , NatyaEvent.class);
                        context.startActivity(intent1);
                        break;
 
                    case 3:
-                       Intent intent2 = new Intent(context , SpecialEventPage.class);
+                       Intent intent2 = new Intent(context , FasionShow.class);
                        context.startActivity(intent2);
                        break;
                    case 4:
-                       Intent intent3 = new Intent (context , SpecialEventPage.class);
+                       Intent intent3 = new Intent (context , Mudrace.class);
                        context.startActivity(intent3);
                        break;
                    default:
                        break;
                }
-                Toast.makeText(context, "you clicked image " + (position + 1), Toast.LENGTH_LONG).show();
             }
         });
 

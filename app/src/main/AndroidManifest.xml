@@ -3,10 +3,9 @@
     package="com.gecpalakkad.invento2k20">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".SpecialEventPage"></activity>
+        <activity android:name=".Mudrace"></activity>
+        <activity android:name=".FasionShow" />
+        <activity android:name=".NatyaEvent" />
+        <activity android:name=".SpecialEventPage" />
         <activity android:name=".EventsMeActivity" />
         <activity android:name=".EventsItActivity" />
         <activity android:name=".EventsEceActivity" />
@@ -32,8 +34,7 @@
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCMDmTMfXCgByDdTvU_OQcw-NZZzrLEeAg"/>
-           />
+            android:value="AIzaSyCMDmTMfXCgByDdTvU_OQcw-NZZzrLEeAg" />
     </application>
 
 </manifest>

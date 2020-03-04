@@ -25,7 +25,7 @@ ViewPager viewpage;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_home,container,false);
-        int images[] = {R.drawable.balloon_cornered, R.drawable.slider, R.drawable.slider, R.drawable.slider};
+        int images[] = {R.drawable.balloon_cornered, R.drawable.natya_round, R.drawable.fasion_round, R.drawable.mud_round};
 
         viewpage = view.findViewById(R.id.viewPager);
 
