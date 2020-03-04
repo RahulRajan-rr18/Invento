@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed()
     {
         if (back_key_pressed + 2000 > System.currentTimeMillis()) super.onBackPressed();
-        else Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
+        else Toast.makeText(getBaseContext(), "Press again to exit!", Toast.LENGTH_SHORT).show();
         back_key_pressed = System.currentTimeMillis();
     }
 
@@ -27,9 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         toolbar = getSupportActionBar();
-
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         getSupportFragmentManager().beginTransaction()
@@ -37,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
 
     }
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -54,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_mess:
-                    fragment = new MessFragment();
+                    fragment = new ReachUsFragment();
                     loadFragment(fragment);
                     return true;
 
@@ -65,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
     private void loadFragment(Fragment fragment) {
         // load fragment
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_container, fragment);
+        transaction.add(R.id.frame_container, fragment);
+        //replace changes to add
         transaction.addToBackStack(null);
         transaction.commit();
     }
